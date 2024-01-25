@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I love dinosaurus</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: #cbf078;
+            padding-top: 80px;
+        }
+
+        .main {
+            background-color: #f8f398;
+            width: 80%;
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+
+        .emoji {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 60px;
+            padding-top: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            color: red;
+            margin:0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #e46161;
+            margin:0;
+            padding-bottom: 10px;
+        }
+
+        img {
+            width: 60%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 20px;
+        }
+
+        h3 {
+            margin: 0 auto;
+            padding-left: 15px;
+            padding-top: 20px;
+            font-size: 25px;
+            font-weight: normal;
+            font-style: oblique;
+        }
+
+        ul {
+            line-height: 1.3;
+            text-align: justify;
+            margin: 10px;
+            list-style: none;
+        }
+
+        li::before {
+            content: "🦖 ";
+        }
+
+        a {
+            color: #e46161;
+            text-decoration: none;
+            display: block;
+            padding-bottom: 20px;
+            padding-left: 15px;
+        }
+
+        button {
+            background-color:red;
+            opacity: 0.9;
+            color:white;
+            box-shadow: 5px 5px 5px #e46161;
+            border: none;
+            display: block;
+            margin: 0 auto;
+            padding: 15px 20px;
+            font-size: 24px;
+            border-radius: 50px;
+            transition: 200ms ease-in-out;
+        }
+        
+       button:hover {
+            opacity: 0.2;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+        .codedBy {
+            text-align: center;
+        }
+
+        .dedication {
+            text-align: right;
+            padding: 15px;
+            font-size: 15px;
+            color:#e46161
+        }
+        
+    </style>
+    <div class="main">
+       <span class="emoji">🦖❤️</span>
+    <h1>I love <br>dinosaurus</h1>
+    <h2>Let's learn more about them !</h2>
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/108/original/dino.jpeg?1697573582" alt="cartoon dinosaurus in the wild" width="500">
+    <div class="facts">
+        <h3>Dino facts:</h3>
+        <ul>
+            <li>
+                Dinosaurs are a group of reptiles that have lived on Earth for about 245 million years.
+            </li>
+            <li>
+                In 1842, the English naturalist Sir Richard Owen coined the term Dinosauria, derived from the Greek deinos, meaning
+                “fearfully great,” and sauros, meaning “lizard.”
+            </li>
+            <li>
+                 Dinosaur fossils have been found on all seven continents.
+            </li>
+           <li>
+            All non-avian dinosaurs went extinct about 66 million years ago.
+           </li>
+            <li>
+                There are roughly 700 known species of extinct dinosaurs.
+            </li>
+            <li>
+                Modern birds are a kind of dinosaur because they share a common ancestor with non-avian dinosaurs
+            </li>
+        </ul>
+    </div>
+    <a href="https://www.amazon.com/JA-RU-Hatching-Mega-Hatch-1745-1747/dp/B07BNBYBNK">Buy your own dino</a>
+    <button>
+        Monthly dinosaur fact
+    </button>
+    <br>
+    <hr>
+    <p class="codedBy">Coded by: <strong>Emilia Wójcik </strong></p>
+    <p class="dedication"><em>With dedication to my lovely girlfriend</em></p> 
+    </div>
+    <script>
+        function register() {
+            let name = prompt("What is your name ?")
+            let email = prompt("What is your e-mail ?")
+            let dino = prompt("What is your favourite dinosaur or name of youur dinosaur ?")
+            let age = prompt("How old are you ?")
+            if (age < 14) {
+                alert(`Hi ${name}! We are really sorry but you are too young to join our newsletter`)
+            }
+            else {
+                alert(`Hi ${name}! You just joined our weekly dino fact newsletter`)
+            }
+            let headline = document.querySelector("h1")
+            headline.innerHTML = `We love ${dino}`
+        }
+        let applyDinoFact = document.querySelector("button")
+        applyDinoFact.addEventListener("click", register)
+    </script>
+</body>
+</html>
